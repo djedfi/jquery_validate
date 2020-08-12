@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+        <title>Form Validate</title>
+    </head>
+    <body>
+        <div class="container" style="margin-top: 1cm;">
+            <div class="card border-info mb-3">
+                <div class="card-header text-info font-weight-bold">
+                    <i class="fas fa-money-check"></i>&nbsp;Validate Form
+                </div>
+                <div class="card-body">
+                    <form class="needs-validation" id="id_form_addrbook" autocomplete="off" novalidate>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="id_txt_lname">Last Name</label>
+                                <input type="text" class="form-control text-uppercase" name="id_txt_lname" id="id_txt_lname" data-cerror-msg="Please provide a right Last Name." data-cok-msg="Good job!!!" pattern="[a-zA-Z\s]+" minlength="1" maxlength="150" autofocus required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="id_txt_fname">First Name</label>
+                                <input type="text" class="form-control text-uppercase" name="id_txt_fname" id="id_txt_fname" pattern="[a-zA-Z\s]+" minlength="1" maxlength="150" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="id_txt_lname">Email</label>
+                                <input type="text" class="form-control text-uppercase" name="id_txt_email" id="id_txt_email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" minlength="1" maxlength="150" autofocus required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="id_txt_fname">Cellphone Number <small id="cellHelpInline" class="text-muted">(E.g.: (647)790-9090)</small></label>
+                                <input type="text" class="form-control text-uppercase" name="id_txt_cell" id="id_txt_cell" pattern="[(][0-9]{3}[)][0-9]{3}-[0-9]{4}" minlength="1" maxlength="11" aria-describedby="cellHelpInline" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="id_txt_lname">User</label>
+                                <input type="text" class="form-control" name="id_txt_user" id="id_txt_user" minlength="1" maxlength="150"  required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="id_txt_fname">Password</label>
+                                <input type="password" class="form-control" name="id_txt_password" id="id_txt_password" minlength="1" maxlength="11" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="id_txt_fname">Repeat Password</label>
+                                <input type="password" class="form-control" name="id_txt_password_rep" id="id_txt_password_rep" data-cmatch="id_txt_password" data-cmatch-msg="Whoops, these don't match..."  minlength="1" maxlength="11" required>
+                            </div>
+                        </div>    
+                        <div class="form-group">
+                            <label for="id_txta_address">Address</label>
+                            <textarea class="form-control" name="id_txta_address" id="id_txta_address" placeholder="1234 Main St" required></textarea>
+                        </div>        
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="id_txt_lname">Gender</label>
+                                <select class="form-control" name="id_sel_gender" id="id_sel_gender" required>
+                                    <option selected disabled value="">Choose...</option>
+                                    <option value="1">Male</option>
+                                    <option value="2">Female</option>
+                                    <option value="3">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="id_txt_lname">Age</label>
+                                <input type="number" class="form-control" name="id_txt_age" id="id_txt_age" minlength="1" maxlength="150"  required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="id_txt_fname">Home Telephone (E.g.: (647)790-9090)</label>
+                                <input type="tel" class="form-control" name="id_txt_home_tele" id="id_txt_home_tele" pattern="[(][0-9]{3}[)][0-9]{3}-[0-9]{4}"  required>
+                            </div>
+                        </div>    
+                        <fieldset class="form-row" id="fld_gridRadios">
+                            <div class="form-group">
+                              <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
+                              <div class="col-md-10">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" required>
+                                  <label class="form-check-label" for="gridRadios1">
+                                    First radio
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" required>
+                                  <label class="form-check-label" for="gridRadios2">
+                                    Second radio
+                                  </label>
+                                </div>
+                                <div class="form-check disabled">
+                                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" required>
+                                  <label class="form-check-label" for="gridRadios3">
+                                    Third disabled radio
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </fieldset>
+                        
+                        <br>
+                        <button type="button" class="btn btn-success" id="id_btn_submit">Submit</button>
+                        <button type="button" class="btn btn-info" id="id_btn_test">Test</button>
+                        <button type="reset" class="btn btn-danger" id="id_btn_reset">Clear</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/c10fa4cc3e.js" crossorigin="anonymous"></script>
+        <script src="cvalidate.js"></script>
+        <script src="index.js"></script>
+</body>
+</html>

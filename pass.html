@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+        <title>Form Validate</title>
+    </head>
+    <body>
+        <div class="container" style="margin-top: 1cm;">
+            <div class="card border-info mb-3">
+                <div class="card-header text-info font-weight-bold">
+                    <i class="fas fa-money-check"></i>&nbsp;Validate Form
+                </div>
+                <div class="card-body">
+                    <form class="needs-validation" id="id_form_addrbook" autocomplete="off" novalidate>
+                        <fieldset class="form-group" id="fld_gender">
+                            <div class="row">
+                                <legend class="col-form-label col-md-2 pt-0">Gender</legend>
+                                <div class="col-md-10">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gender" id="male" value="1" required>
+                                        <label class="form-check-label" for="male" id="lbl_male">
+                                            Male
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gender" id="female" value="2" required>
+                                        <label class="form-check-label" for="female" id="lbl_female">
+                                            Female
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gender" id="other" value="3" required>
+                                        <label class="form-check-label" for="other" id="lbl_other">
+                                            Other
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="form-group" id="fld_sports">
+                            <div class="row">
+                                <legend class="col-form-label col-md-2 pt-0">Sports</legend>
+                                <div class="col-md-10">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="sports" id="soccer" value="1" required>
+                                        <label class="form-check-label" for="soccer">
+                                            Soccer
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="sports" id="golf" value="2" required>
+                                        <label class="form-check-label" for="golf">
+                                            Golf
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="sports" id="tennis" value="3" required>
+                                        <label class="form-check-label" for="tennis">
+                                            Tennis
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>      
+                        
+
+                        <button type="button" class="btn btn-success" id="id_btn_submit">Submit</button>
+                        <button type="button" class="btn btn-info" id="id_btn_test">Test</button>
+                        <button type="reset" class="btn btn-danger" id="id_btn_reset">Clear</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/c10fa4cc3e.js" crossorigin="anonymous"></script>
+        <script src="cvalidate.js"></script>
+        <script src="index.js"></script>
+</body>
+</html>
